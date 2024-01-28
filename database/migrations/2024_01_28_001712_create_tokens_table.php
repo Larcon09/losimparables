@@ -11,13 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cavs', function (Blueprint $table) {
+        Schema::create('tokens', function (Blueprint $table) {
+            $table->engine="InnoDB";
             $table->id();
-            $table->unsignedInteger('ciudad_id');
-            $table->string('nombre');
+            $table->string('codigo');
+            $table->bigInteger('user_id')->unsigned();
+            $table->string('estado');
             $table->timestamps();
 
-            $table->foreign('ciudad_id')->references('id')->on('ciudades');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
@@ -26,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cavs');
+        Schema::dropIfExists('tokens');
     }
 };

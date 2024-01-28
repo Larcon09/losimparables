@@ -12,15 +12,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('ganadores', function (Blueprint $table) {
+            $table->engine="InnoDB";
             $table->id();
-            $table->unsignedInteger('token_id');
-            $table->unsignedInteger('user_id');
-            $table->unsignedInteger('premio_id');
+            $table->bigInteger('token_id')->unsigned();
+            $table->bigInteger('user_id')->unsigned();
+            $table->bigInteger('premio_id')->unsigned();
             $table->timestamps();
 
-            $table->foreign('token_id')->references('id')->on('token');
-            $table->foreign('user_id')->references('id')->on('user');
-            $table->foreign('premio_id')->references('id')->on('premio');
+            $table->foreign('token_id')->references('id')->on('tokens')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('premio_id')->references('id')->on('premios')->onDelete('cascade');
         });
     }
 

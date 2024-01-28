@@ -11,14 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tokens', function (Blueprint $table) {
+        Schema::create('premios', function (Blueprint $table) {
+            $table->engine="InnoDB";
             $table->id();
             $table->string('codigo');
-            $table->string('user_id');
-            $table->string('estado');
+            $table->string('nombre');
+            $table->longText('description');
+            $table->integer('cantidad');
+            $table->string('image_uri',255)->nullable();
+            $table->Integer('user');
             $table->timestamps();
-
-            $table->foreign('user_id')->references('id')->on('user');
         });
     }
 
@@ -27,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tokens');
+        Schema::dropIfExists('premios');
     }
 };

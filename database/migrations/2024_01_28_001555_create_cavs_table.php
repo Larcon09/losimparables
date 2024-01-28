@@ -11,9 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('permisos', function (Blueprint $table) {
+        Schema::create('cavs', function (Blueprint $table) {
+            $table->engine="InnoDB";
             $table->id();
+            $table->bigInteger('ciudad_id')->unsigned();
+            $table->string('nombre');
             $table->timestamps();
+
+            $table->foreign('ciudad_id')->references('id')->on('ciudades')->onDelete('cascade');
         });
     }
 
@@ -22,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('permisos');
+        Schema::dropIfExists('cavs');
     }
 };
