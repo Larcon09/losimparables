@@ -1,0 +1,232 @@
+p,h1,h2,h3,h4{
+    font-family: "Poppins", sans-serif;
+}
+a{
+text-decoration: none !important;
+font-family: "Poppins", sans-serif;
+}
+a:hover{
+    text-decoration: none;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+input[type=number] { 
+    -moz-appearance:textfield; 
+}
+.strong{
+    font-weight: bold;
+}
+.title1{
+    color:#D52B1E;
+    margin-bottom: 35px;
+}
+body{
+height: 100%;
+}
+.container{
+    position: relative;
+}
+.contenedor{
+    width: 100%;
+    height: 100%;
+}
+.pad0{padding: 5px;box-sizing: border-box;}
+.pad1{padding: 10px;box-sizing: border-box;}
+.pad2{padding: 20px;box-sizing: border-box;}
+.pad3{padding: 30px;box-sizing: border-box;}
+.pad4{padding: 40px;box-sizing: border-box;}
+
+.header{     
+    background: url(../images/Imparables\ de\ Claro-5-2.jpg);    
+    background-size: cover;
+    display: block;
+}
+.header_movile{
+    display: none;
+}
+header{
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.cont-table{
+    width: auto;
+}
+.cont-table, .table td, .table th{
+    vertical-align: middle !important;
+}
+.none{
+    display: none;
+}
+.cont-img{
+    width: 100%;
+    position: relative;
+}
+.cont-img img{
+    width: 100%;
+}
+.title{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+  
+}
+.salir{
+float:right;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.salir a{
+    font-size: 20px;
+    text-align: right;
+    color:#fff;
+    padding: 5px 8px;
+    margin: 4px;
+    border-radius: 5px;
+    background: #D52B1E;
+}
+.salir a:hover{
+    background: #911d02;
+    color:#fff;
+    text-decoration: none;
+}
+
+.subheader{
+    background: #D52B1E;
+    width: 100%;
+    padding: 10px;
+}
+.subheader a{
+    color: #fff;
+}
+.subheader a:active{
+    color: #fff;
+}
+.subheader .navbar-toggler {
+    color:#fff
+}
+.menu{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding:10px;
+}
+.elemento{
+    margin:auto;
+}
+.elemento a{
+    color:#ffffff;  
+    font-size: 16px;
+    background: transparent;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    padding: 10px 20px;
+ text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    margin: auto;
+}    
+.elemento a:hover{
+    background: #fff;
+    color:#D52B1E;
+    text-decoration: none;
+}
+.active a{
+    background: #fff;
+    color:#D52B1E;
+}
+.cont-form {
+    width: 100%;
+    box-sizing: border-box;
+}
+.cont-form input[type=text], .cont-form input[type=submit], .cont-form select, .cont-form input[type=password], .cont-form input[type=number] {
+    width: 100%;
+    padding: 4px;
+    font-size: 15px;
+    border: none;
+}
+.cont-form input[type=date] {
+    line-height: 27px;
+    width: 100%;
+    font-size: 17px;
+    border: none;
+}
+.cont-form input[type=submit] {
+    background: #D52B1E;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    width: 100%;
+}
+.cont-form .note1 ul li span {
+    color: #D52B1E;
+    font-weight: 800;
+}
+.cont-form .note1 p {
+    text-align: left;
+}
+.cont-form .note1 ul {
+    margin: 0px;
+    list-style-type: disc;
+}
+.cont-form .note1 ul ul {
+    list-style-type: circle;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+.cont-form p {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0px;
+    color: #1a1a1a;
+}
+.cont-form table {
+    width: 100%;
+}
+.cont-form table thead {
+    background: #D52B1E;
+    padding: 5px;
+}
+.cont-form table thead th, .cont-form table tbody td {
+    padding: 2px;
+    border: 1px solid #dedede;
+}
+.cont-form table thead p {
+    color: #fff;
+    font-size: 17px;
+    text-align: center;
+}
+.btn-cot:hover {
+    background: #D52B1E;
+    text-decoration: none;
+}
+.btn-cot.btn-left {
+    float: left;
+}
+.btn-cot {
+    background: #eba422;
+    border-radius: 5px;
+    float: right;
+    padding: 4px 15px;
+    border: 0px;
+    cursor: pointer;
+    color: #fff;
+}
+.btn-cot p {
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+}

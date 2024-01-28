@@ -22,5 +22,6 @@ class DatabaseSeeder extends Seeder
         $this->call(CiudadesSeeder::class);
         $this->call(CavsSeeder::class);
         $this->call(ArchivoSeeder::class);
+        $this->call(MenuSeeder::class);
     }
 }

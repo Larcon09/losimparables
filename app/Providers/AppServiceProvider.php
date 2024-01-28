@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-
+use View;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -12,6 +12,7 @@ class AppServiceProvider extends ServiceProvider
     public function register(): void
     {
         //
+
     }
 
     /**
@@ -20,5 +21,14 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
+      /*  View::composer('*', function ($view){
+            if(Auth::user()){
+                $user=User::find(auth()->id());
+                $menus=Menu::select()->where('rol','=',$user['rol'])->get();
+            }else{
+                $menus=[];
+            }
+            $view->with('menu',$menus);
+        });*/
     }
 }

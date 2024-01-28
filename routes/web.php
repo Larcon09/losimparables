@@ -60,6 +60,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::view('/activaciones', 'panel.activaciones')->name('activaciones');
+    Route::view('/jugar', 'panel.jugar')->name('jugar');
+    Route::view('/premios', 'panel.premios')->name('premios');
+    Route::view('/ganadores', 'panel.ganadores')->name('ganadores');
+    Route::view('/tyc', 'panel.tyc')->name('terminosycondiciones');
+    Route::view('/perfil', 'panel.perfil')->name('perfil');
 });
 
 require __DIR__.'/auth.php';
