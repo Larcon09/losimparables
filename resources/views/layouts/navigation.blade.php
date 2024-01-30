@@ -20,11 +20,11 @@
                 <div class="col-5">
                     <div class="config_boton">
                         <!-- Settings Dropdown -->
-                        <div class="hidden sm:flex sm:items-center sm:ms-6">
+                        <div class="hidden sm:flex sm:items-center sm:ms-6 justify-content-end">
                             <x-dropdown align="right" width="48">
                                 <x-slot name="trigger">
                                     <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
-                                        <div>{{ Auth::user()->name }}{{ Auth::user()->rol }}</div>
+                                        <div>ID {{ Auth::user()->cedula }}</div>
 
                                         <div class="ms-1">
                                             <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -35,9 +35,9 @@
                                 </x-slot>
 
                                 <x-slot name="content">
-                                    <x-dropdown-link :href="route('profile.edit')">
+                                    <!--<x-dropdown-link :href="route('profile.edit')">
                                         {{ __('Profile') }}
-                                    </x-dropdown-link>
+                                    </x-dropdown-link>-->
 
                                     <!-- Authentication -->
                                     <form method="POST" action="{{ route('logout') }}">
@@ -63,18 +63,56 @@
             <nav>
                 <div class="row">
                 <div class="menu">
+                         @can('Vendedor')
+                         <div class="elemento e8 {{ request()->is('activaciones') ? 'active' : '' }}"><a href="{{route('activaciones')}}" >Ingresar Activaciones</a></div>
+                         @endcan
                          
-                         <div class="elemento e8  "><a href="{{route('activaciones')}}" :active="request()->routeIs('activaciones')">Ingresar Activaciones</a></div>
+                         @can('Vendedor')
+                         <div class="elemento e9 {{ request()->is('jugar') ? 'active' : '' }}"><a href="{{route('jugar')}}">Jugar</a></div>
+                         @endcan
+                         @can('Vendedor')
+                         <div class="elemento e10 {{ request()->is('premios') ? 'active' : '' }}"><a href="{{route('premios')}}">Premios</a></div>
+                         @endcan
+                         @can('Vendedor')
+                         <div class="elemento e11 {{ request()->is('ganadores') ? 'active' : '' }}"><a href="{{route('ganadores')}}">Ganadores</a></div>
+                         @endcan
+                         @can('Vendedor')
+                         <div class="elemento e12 {{ request()->is('tyc') ? 'active' : '' }}"><a href="{{route('terminosycondiciones')}}">Terminos y condiciones</a></div>
+                         @endcan
+                         @can('Vendedor')
+                         <div class="elemento e13 {{ request()->is('perfil') ? 'active' : '' }}"><a href="{{route('perfil')}}">Perfil</a></div>
+                         @endcan
+
+                         
+                         @can('Administrador')
+                         <div class="elemento e8 {{ request()->is('dashboard_admin') ? 'active' : '' }}"><a href="{{route('dashboard_admin')}}" >Dashboard</a></div>
+                         @endcan                         
+                         @can('Administrador')
+                         <div class="elemento e9 {{ request()->is('jugar_admin') ? 'active' : '' }}"><a href="{{route('jugar_admin')}}">Jugar</a></div>
+                         @endcan
+                         @can('Administrador')
+                         <div class="elemento e10 {{ request()->is('activaciones_admin') ? 'active' : '' }}"><a href="{{route('activaciones_admin')}}">Reporte de Activaciones</a></div>
+                         @endcan
+                         @can('Administrador')
+                         <div class="elemento e11 {{ request()->is('premios_admin') ? 'active' : '' }}"><a href="{{route('premios_admin')}}">Reporte de Premios</a></div>
+                         @endcan
+                         @can('Administrador')
+                         <div class="elemento e12 {{ request()->is('ganadores_admin') ? 'active' : '' }}"><a href="{{route('ganadores_admin')}}">Ganadores</a></div>
+                         @endcan
+                         @can('Administrador')
+                         <div class="elemento e13 {{ request()->is('tyc_admin') ? 'active' : '' }}"><a href="{{route('tyc_admin')}}">Terminos y Condiciones</a></div>
+                         @endcan
+                         @can('Administrador')
+                         <div class="elemento e13 {{ request()->is('usuarios') ? 'active' : '' }}"><a href="{{route('usuarios')}}">Usuarios</a></div>
+                         @endcan
                   
-                         <div class="elemento e9  "><a href="{{route('jugar')}}">Jugar</a></div>
+                         
                   
-                         <div class="elemento e10  "><a href="{{route('premios')}}">Premios</a></div>
+                         
                   
-                         <div class="elemento e11  "><a href="{{route('ganadores')}}">Ganadores</a></div>
+                         
                   
-                         <div class="elemento e12  "><a href="{{route('terminosycondiciones')}}">Terminos y condiciones</a></div>
-                  
-                         <div class="elemento e13  "><a href="{{route('perfil')}}">Perfil</a></div>
+                         
                                          </div>
                 </div>
             </nav>
@@ -82,11 +120,11 @@
     </div>
 </header>
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
-    <!-- Primary Navigation Menu -->
+    <!-- Primary Navigation Menu 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
+        <div class="flex justify-between h-16">-->
             <!-- Hamburger -->
-            <div class="-me-2 flex items-center sm:hidden">
+            <!--  <div class="-me-2 flex items-center sm:hidden">
                 <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
                     <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                         <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -95,7 +133,7 @@
                 </button>
             </div>
         </div>
-    </div>
+    </div>-->
 
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">

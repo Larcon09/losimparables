@@ -38,18 +38,22 @@ height: 100%;
 .pad2{padding: 20px;box-sizing: border-box;}
 .pad3{padding: 30px;box-sizing: border-box;}
 .pad4{padding: 40px;box-sizing: border-box;}
-
+.bg-all {
+    background-image: url(../images/Impa.\ 1\ Claro.jpg);
+    background-size: cover;
+    padding-top: 30px;
+}
 .header{     
     background: url(../images/Imparables\ de\ Claro-5-2.jpg);    
     background-size: cover;
     display: block;
+    padding: 5px;
 }
 .header_movile{
     display: none;
 }
 header{
-    width: 100%;
-    padding: 5px;
+    width: 100%;   
     box-sizing: border-box;
 }
 .cont-table{
@@ -229,4 +233,224 @@ float:right;
     font-size: 20px;
     color: #fff;
     font-weight: bold;
+}
+/*----Premios-----*/
+.contenpre {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+}
+.contpre {
+    background: #fff;
+    width: 23%;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 1px 1px 10px #4b4b4b4d;
+}
+.contpre img {
+    width: 100%;
+}
+.img-bg {
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+.entregado {
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    top: 50%;
+    background: rgb(213 43 30 / 76%);
+    border-radius: 5px;
+}
+.entregado p {
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 700;
+    margin: 0px;
+}
+.title-prem-1 {
+    border-top: 1px solid #D52B1E;
+    border-bottom: 1px solid #D52B1E;
+}
+.title-prem-1 p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #D52B1E;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 1rem;
+   }
+.title-prem-2 p {
+    font-size: 20px;
+    font-weight: 500;
+    color: #696969;
+    text-align: center;
+    margin: 0px;
+}
+.contgan {
+    width: 20%;
+    background: #fff;
+    border-radius: 15px;
+    margin: 10px;
+    box-shadow: 1px 1px 10px #4b4b4b4d;
+}
+.contgan .img-bg {
+    padding: 10px;
+}
+
+element.style {
+    background-image: url(imagenes/user/avatar/avt15.png);
+    background-position: center;
+}
+.contgan .img-bg {
+    padding: 10px;
+}
+.img-bg {
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+.title-gan-1 {
+    border-top: 1px solid #D52B1E;
+    border-bottom: 1px solid #D52B1E;
+}
+.title-gan-1 p {
+    font-size: 15px;
+    font-weight: 600;
+    color: #D52B1E;
+    text-align: center;
+    margin: 0px;
+}
+.title-gan-2 p {
+    font-size: 17px;
+    font-weight: 400;
+    color: #8f8f8f;
+    text-align: left;
+    margin: 0px;
+}
+.boton-claro {
+    margin-top: 20px;
+    width: auto;
+    background: #D52B1E;
+    padding: 15px 80px;
+    border-radius: 4px;
+}
+.boton-claro p {
+    color: #fff;
+    margin: 0px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    width: auto;
+}
+/*----Ganadores-----*/
+.contengan {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+}
+/*----terminos y condiciones-----*/
+.termsandcond {
+    position: relative;
+    background: rgb(255 255 255 / 71%);
+    border-radius: 10px;
+    padding: 30px;
+}
+.title-all {
+    position: relative;
+    display: flex;
+    padding: 10px;
+    margin-top: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.archivo p {
+    color: #333333;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 2em;
+    text-align: justify;
+}
+/*----Perfil-----*/
+.cont-user {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+}
+.user-flex {
+    display: flex;
+}
+.h4, h4 {
+    font-size: 1.5rem;
+}
+.h6, h6 {
+    font-size: 1rem;
+}
+.mt-3 {
+    margin-top: 1rem!important;
+}
+.user {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+    padding: 20px;
+}
+.text-secondary {
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-secondary-rgb),var(--bs-text-opacity))!important;
+}
+.mb-1 {
+    margin-bottom: 0.25rem!important;
+}
+hr {
+    margin: 1rem 0;
+    color: inherit;
+    border: 0;
+    border-top: var(--bs-border-width) solid;
+    opacity: .25;
+}
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'iconos';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.list-premios {
+    background: #ebebeb;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 4px;
+}
+.text-prem {
+    width: auto;
 }
